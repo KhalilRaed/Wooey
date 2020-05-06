@@ -1,0 +1,41 @@
+import tkinter as tk
+from tkinter import *
+from PIL import ImageTk,Image
+Height=654
+Width=931
+#khalle l window wel frame size add mannon kermel ma7all l bouttons ma yetghayar
+#w elle eza baddak teb2a tzid label aw 7ayalla chi w elle wen beddak t7otta w ana bzida w beb3atlak l code taba3a
+fenetre=Tk()
+fenetre.title('RAR COVID-19')
+fenetre.title('RAR COVID-19')
+fenetre.resizable(0,0)
+
+canvas=tk.Canvas(fenetre,height=Height,width=Width)
+canvas.pack()
+frame=tk.Frame(fenetre,bg='white')
+frame.place(relx=0,rely=0,relwidth=1, relheight=1)
+
+background_image=ImageTk.PhotoImage(Image.open('C:\\Users\\R2W\\Desktop\\projet info 3\\covid19.jpg'))
+background_label=tk.Label(frame,image=background_image)
+background_label.place(relwidth=1,relheight=1)
+fenetre.iconbitmap('C:\\Users\\R2W\\Desktop\\projet info 3\\Picture1.ico')
+
+#@NASSAR : lek haida l sater li deghre fo2 lezem tzido 3a kell l roots aw l fenetre li enta 3emelon bi kell l projet w ello la Ralph zet l chi haida kermel l icon top left corner
+
+#fie chil l relx w rely, wel relhight b7otta =1 bet sir full background
+boutton1=tk.Button(frame,text='About',bg='grey',fg='white')
+boutton1.place(relx=0.089760479,rely=0.0209520958,relwidth=0.119760479,relheight=0.05)
+boutton2=tk.Button(frame,text='News',bg='grey',fg='white')
+boutton2.place(relx=0.780239521,rely=0.0289520958,relwidth=0.119760479,relheight=0.05)
+boutton3=tk.Button(frame,text='Statistics',bg='grey',fg='white')
+boutton3.place(relx=0.039760479,rely=0.8260479042,relwidth=0.119760479,relheight=0.05)
+boutton4=tk.Button(frame,text='More',bg='grey',fg='white')
+boutton4.place(relx=0.830239521,rely=0.7260479042,relwidth=0.119760479,relheight=0.05)
+#fill='both or x or y'  expand='true' ta nkabber l n=boutton
+
+
+#entry=tk.Entry(frame,bg='green')
+#entry.pack()
+
+
+fenetre.mainloop()
